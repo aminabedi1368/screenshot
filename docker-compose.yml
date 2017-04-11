@@ -1,0 +1,26 @@
+version: '2'
+
+
+volumes:
+  node_modules:
+#  npm_debug:
+
+
+services:
+
+  ## --------------------------------------------
+  ## | Data Base Master Mongo Server
+  ## --------------------------------------------
+  node-web-server:
+    build: ./.docker-compose/web-server
+
+#    restart: always
+    image: screenshot_web-server
+    expose:
+     - "3200"
+    volumes:
+     - ./.docker-compose/web-server/app/screenshot:/usr/src/app/screenshot
+     - ./.docker-compose/web-server/app/server.js:/usr/src/app/server.js
+#     - node_modules:/usr/src/app/node_modules
+#     - node_modules:/usr/src/app/node_modules
+#     - ./.docker-compose/web-server/app/npm-debug.log:/usr/src/app/npm-debug.log

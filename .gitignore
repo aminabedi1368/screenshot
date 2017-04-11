@@ -1,0 +1,4 @@
+.idea
+.docker-compose/web-server/app/screenshot/*
+.docker-compose/web-server/app/npm-debug.log
+.docker-compose/web-server/app/node_modules/*
