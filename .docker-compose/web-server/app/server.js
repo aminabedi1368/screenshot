@@ -58,7 +58,10 @@ app.get('/shot', function(req, res) {
     };
     //console.log(link);
      var name = link+".jpg";
-    name = name.replace(/\//g, "$$");
+    //name = name.replace(/\//g, "$$");
+    name = name.replace("http://www.", "");
+
+
     var resName=name;
          console.log(name);
     var nameShot ="screenshot/"+name;
